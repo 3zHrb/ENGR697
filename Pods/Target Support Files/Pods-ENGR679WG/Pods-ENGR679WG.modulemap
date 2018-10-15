@@ -1,0 +1,6 @@
+framework module Pods_ENGR679WG {
+  umbrella header "Pods-ENGR679WG-umbrella.h"
+
+  export *
+  module * { export * }
+}
