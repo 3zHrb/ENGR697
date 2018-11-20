@@ -44,7 +44,7 @@
                                     <segue destination="WZB-An-i9R" kind="show" identifier="toSignUp" id="dvn-Qm-Y71"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Medical Garduian" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCM-aP-OHt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Medical Guardian" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCM-aP-OHt">
                                 <rect key="frame" x="104" y="323" width="167" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.99228101968765259" green="0.99107736349105835" blue="0.97379857301712036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -93,7 +93,7 @@
                                 <rect key="frame" x="16" y="160" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Er5-5X-t0V">
                                 <rect key="frame" x="164" y="68" width="41" height="21"/>
@@ -118,6 +118,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="loginButton:" destination="e4D-ZI-NX9" eventType="touchUpInside" id="7Yr-L6-oEI"/>
                                     <segue destination="5h3-wO-YmF" kind="show" identifier="signInbutton" id="6sy-GF-65C"/>
                                 </connections>
                             </button>
@@ -144,6 +145,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G4e-Pd-IHt"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="tdc-ad-pWG" id="dBu-O8-bW7"/>
+                        <outlet property="passwordTextField" destination="7Em-T8-hVZ" id="unH-kP-Szh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iVl-xF-75O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,7 +162,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RqB-gS-h3T">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RqB-gS-h3T">
                                 <rect key="frame" x="16" y="97" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -167,7 +172,7 @@
                                 <rect key="frame" x="16" y="165" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTj-Sz-mSL">
                                 <rect key="frame" x="166" y="68" width="41" height="21"/>
@@ -191,18 +196,25 @@
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signupButton:" destination="WZB-An-i9R" eventType="touchUpInside" id="toY-2U-V5t"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.082352941176470587" green="0.14509803921568626" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="RqB-gS-h3T" firstAttribute="top" secondItem="kTj-Sz-mSL" secondAttribute="bottom" constant="8" id="3IC-Ao-ICl"/>
                             <constraint firstItem="8lz-Qs-tH2" firstAttribute="trailing" secondItem="pcJ-qq-fiH" secondAttribute="trailing" constant="16" id="4aB-tE-6W5"/>
                             <constraint firstItem="yhk-5Y-FTg" firstAttribute="trailing" secondItem="8lz-Qs-tH2" secondAttribute="trailing" id="8te-f4-x8m"/>
                             <constraint firstItem="pcJ-qq-fiH" firstAttribute="leading" secondItem="8lz-Qs-tH2" secondAttribute="leading" constant="16" id="CGz-KD-jfQ"/>
                             <constraint firstItem="8lz-Qs-tH2" firstAttribute="trailing" secondItem="kTj-Sz-mSL" secondAttribute="trailing" constant="168" id="GUM-Rx-Goc"/>
+                            <constraint firstItem="8lz-Qs-tH2" firstAttribute="trailing" secondItem="RqB-gS-h3T" secondAttribute="trailing" constant="16" id="H8i-uT-mcB"/>
+                            <constraint firstItem="RqB-gS-h3T" firstAttribute="leading" secondItem="8lz-Qs-tH2" secondAttribute="leading" constant="16" id="NTf-0F-Mud"/>
                             <constraint firstItem="yhk-5Y-FTg" firstAttribute="leading" secondItem="8lz-Qs-tH2" secondAttribute="leading" id="QeM-lw-yOn"/>
                             <constraint firstItem="pcJ-qq-fiH" firstAttribute="top" secondItem="9SN-kK-9qa" secondAttribute="bottom" constant="8" id="RgW-Xf-Zfu"/>
                             <constraint firstItem="kTj-Sz-mSL" firstAttribute="leading" secondItem="8lz-Qs-tH2" secondAttribute="leading" constant="166" id="Umv-EC-LlS"/>
                             <constraint firstItem="pcJ-qq-fiH" firstAttribute="top" secondItem="9SN-kK-9qa" secondAttribute="bottom" constant="8" id="V0r-ft-Sob"/>
+                            <constraint firstItem="9SN-kK-9qa" firstAttribute="top" secondItem="RqB-gS-h3T" secondAttribute="bottom" constant="9" id="XxD-oD-6fg"/>
                             <constraint firstItem="8lz-Qs-tH2" firstAttribute="trailing" secondItem="9SN-kK-9qa" secondAttribute="trailing" constant="151" id="aDE-WQ-BTI"/>
                             <constraint firstItem="kTj-Sz-mSL" firstAttribute="top" secondItem="8lz-Qs-tH2" secondAttribute="top" constant="48" id="aEo-hW-dft"/>
                             <constraint firstItem="RqB-gS-h3T" firstAttribute="top" secondItem="kTj-Sz-mSL" secondAttribute="bottom" constant="8" id="mGS-um-lci"/>
@@ -213,6 +225,8 @@
                         <viewLayoutGuide key="safeArea" id="8lz-Qs-tH2"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="RqB-gS-h3T" id="Ksg-li-5j5"/>
+                        <outlet property="passwordTextField" destination="pcJ-qq-fiH" id="Irj-Yd-cRN"/>
                         <segue destination="5h3-wO-YmF" kind="show" identifier="toCalender" id="jsp-bB-13v"/>
                     </connections>
                 </viewController>
@@ -283,6 +297,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jsp-bB-13v"/>
+        <segue reference="24w-yy-QLn"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import Firebase
+import SVProgressHUD
 
 class SignIn: UIViewController {
 
+    @IBOutlet var emailTextField: UITextField!// is set to be strong !!
+    @IBOutlet var passwordTextField: UITextField! // is set to be strong !!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +29,26 @@ class SignIn: UIViewController {
     }
     
 
+    @IBAction func loginButton(_ sender: Any) {
+        
+        SVProgressHUD.show()
+        
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            
+            if error != nil {
+                print(error!)
+            } else {
+                print("Log in successful!")
+                
+                SVProgressHUD.dismiss()
+                
+                self.performSegue(withIdentifier: "toCalender", sender: self)
+                
+            }
+            
+        }
+        
+    }
     /*
     // MARK: - Navigation
 

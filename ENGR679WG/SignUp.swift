@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Firebase
+import SVProgressHUD
 
 class SignUp: UIViewController {
 
+    @IBOutlet var emailTextField: UITextField!//strong
+    @IBOutlet var passwordTextField: UITextField!//strong
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +25,29 @@ class SignUp: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func signupButton(_ sender: Any) {
+        
+        SVProgressHUD.show()
+        
+        //Set up a new user on our Firebase database
+        
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            
+            if error != nil {
+                print(error!)
+            } else {
+                print("Registration Successful!")
+                
+                SVProgressHUD.dismiss()
+                
+                self.performSegue(withIdentifier: "toCalender", sender: self)
+            }
+        }
+        
+    }
+        
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -32,4 +58,4 @@ class SignUp: UIViewController {
     }
     */
 
-}
+
