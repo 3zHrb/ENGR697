@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MainPageViewController: UIViewController {
 
@@ -16,7 +17,17 @@ class MainPageViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func signOutPressed(_ sender: Any) {
+       
+        do {
+       try Auth.auth().signOut()
+navigationController?.popToRootViewController(animated: true)
+        }catch{
+            
+            print("there is a problem with signOut")
+            
+        }
+    
     /*
     // MARK: - Navigation
 
@@ -27,4 +38,5 @@ class MainPageViewController: UIViewController {
     }
     */
 
+}
 }
