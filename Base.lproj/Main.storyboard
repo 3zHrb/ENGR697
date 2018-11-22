@@ -168,7 +168,9 @@
                         <color key="backgroundColor" red="0.089741520583629608" green="0.16432192921638489" blue="0.35026824474334717" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Er5-5X-t0V" firstAttribute="leading" secondItem="G4e-Pd-IHt" secondAttribute="leading" constant="164" id="1IP-iA-Pcw"/>
+                            <constraint firstItem="Er5-5X-t0V" firstAttribute="centerX" secondItem="MIY-DH-2dr" secondAttribute="centerX" id="5QT-Ul-avY"/>
                             <constraint firstItem="bix-cP-SA3" firstAttribute="bottom" secondItem="G4e-Pd-IHt" secondAttribute="bottom" id="92i-0a-Sjv"/>
+                            <constraint firstItem="6lr-Dp-9gX" firstAttribute="centerX" secondItem="MIY-DH-2dr" secondAttribute="centerX" id="99d-ry-9r3"/>
                             <constraint firstItem="bix-cP-SA3" firstAttribute="leading" secondItem="G4e-Pd-IHt" secondAttribute="leading" id="Dbj-w3-kUe"/>
                             <constraint firstItem="G4e-Pd-IHt" firstAttribute="trailing" secondItem="Er5-5X-t0V" secondAttribute="trailing" constant="170" id="GPj-Nv-Tew"/>
                             <constraint firstItem="bix-cP-SA3" firstAttribute="trailing" secondItem="G4e-Pd-IHt" secondAttribute="trailing" id="Jyk-b8-8Lh"/>
@@ -217,7 +219,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BLEname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbZ-KQ-5QQ">
-                                                    <rect key="frame" x="15" y="11" width="73" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="301" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -247,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbi-Fq-8wi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3534" y="-485"/>
+            <point key="canvasLocation" x="3533.5999999999999" y="-485.30734632683664"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="ikI-rx-umd">
@@ -302,6 +304,7 @@
                             <constraint firstItem="8lz-Qs-tH2" firstAttribute="trailing" secondItem="pcJ-qq-fiH" secondAttribute="trailing" constant="16" id="4aB-tE-6W5"/>
                             <constraint firstItem="yhk-5Y-FTg" firstAttribute="trailing" secondItem="8lz-Qs-tH2" secondAttribute="trailing" id="8te-f4-x8m"/>
                             <constraint firstItem="pcJ-qq-fiH" firstAttribute="leading" secondItem="8lz-Qs-tH2" secondAttribute="leading" constant="16" id="CGz-KD-jfQ"/>
+                            <constraint firstItem="kTj-Sz-mSL" firstAttribute="centerX" secondItem="lAI-so-ZEh" secondAttribute="centerX" id="EXb-f5-hOK"/>
                             <constraint firstItem="8lz-Qs-tH2" firstAttribute="trailing" secondItem="kTj-Sz-mSL" secondAttribute="trailing" constant="168" id="GUM-Rx-Goc"/>
                             <constraint firstItem="8lz-Qs-tH2" firstAttribute="trailing" secondItem="RqB-gS-h3T" secondAttribute="trailing" constant="16" id="H8i-uT-mcB"/>
                             <constraint firstItem="RqB-gS-h3T" firstAttribute="leading" secondItem="8lz-Qs-tH2" secondAttribute="leading" constant="16" id="NTf-0F-Mud"/>
@@ -315,6 +318,7 @@
                             <constraint firstItem="RqB-gS-h3T" firstAttribute="top" secondItem="kTj-Sz-mSL" secondAttribute="bottom" constant="8" id="mGS-um-lci"/>
                             <constraint firstItem="yhk-5Y-FTg" firstAttribute="bottom" secondItem="8lz-Qs-tH2" secondAttribute="bottom" id="ojS-xI-xWd"/>
                             <constraint firstItem="9SN-kK-9qa" firstAttribute="leading" secondItem="8lz-Qs-tH2" secondAttribute="leading" constant="150" id="pmR-BN-1BW"/>
+                            <constraint firstItem="9SN-kK-9qa" firstAttribute="centerX" secondItem="lAI-so-ZEh" secondAttribute="centerX" id="tEx-Tj-Kee"/>
                             <constraint firstItem="9SN-kK-9qa" firstAttribute="top" secondItem="RqB-gS-h3T" secondAttribute="bottom" constant="9" id="xZE-ph-cfZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8lz-Qs-tH2"/>

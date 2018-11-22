@@ -16,6 +16,7 @@
 		0456F93321A54F2F00D68E6B /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F93221A54F2F00D68E6B /* MainPageViewController.swift */; };
 		04580A712171B250004A5A0E /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04580A702171B250004A5A0E /* SignIn.swift */; };
 		04580A732171B286004A5A0E /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04580A722171B286004A5A0E /* SignUp.swift */; };
+		045EF5BB21A695D500F35741 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045EF5BA21A695D500F35741 /* CoreBluetooth.framework */; };
 		04F4140121A3FD700084F04D /* BLEsettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4140021A3FD700084F04D /* BLEsettings.swift */; };
 		04F4140321A42BA50084F04D /* CellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4140221A42BA50084F04D /* CellTableViewCell.swift */; };
 		59267FF79FBA0F31B673DCC5 /* Pods_ENGR679WG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A33F3E56D3B8682A0C55096 /* Pods_ENGR679WG.framework */; };
@@ -33,6 +34,7 @@
 		0456F93221A54F2F00D68E6B /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		04580A702171B250004A5A0E /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		04580A722171B286004A5A0E /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		045EF5BA21A695D500F35741 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		04F4140021A3FD700084F04D /* BLEsettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEsettings.swift; sourceTree = "<group>"; };
 		04F4140221A42BA50084F04D /* CellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewCell.swift; sourceTree = "<group>"; };
 		4A33F3E56D3B8682A0C55096 /* Pods_ENGR679WG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ENGR679WG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045EF5BB21A695D500F35741 /* CoreBluetooth.framework in Frameworks */,
 				59267FF79FBA0F31B673DCC5 /* Pods_ENGR679WG.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +95,7 @@
 		3C6EE036D27E4861C957AB1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				045EF5BA21A695D500F35741 /* CoreBluetooth.framework */,
 				4A33F3E56D3B8682A0C55096 /* Pods_ENGR679WG.framework */,
 			);
 			name = Frameworks;

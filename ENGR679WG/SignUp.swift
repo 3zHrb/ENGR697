@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SVProgressHUD
 
-class SignUp: UIViewController {
+class SignUp: UIViewController, UITextFieldDelegate {
 
    
     @IBOutlet weak var emailTextField: UITextField!
@@ -22,6 +22,10 @@ class SignUp: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,6 +63,24 @@ class SignUp: UIViewController {
         }
         
     }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        self.view.endEditing(true)
+        
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        
+        return(true)
+        
+    }
+    
         
     }
     
