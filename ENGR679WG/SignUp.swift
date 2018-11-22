@@ -40,7 +40,7 @@ class SignUp: UIViewController {
                 
                 SVProgressHUD.dismiss()
                 
-                self.performSegue(withIdentifier: "toCalender", sender: self)
+                self.performSegue(withIdentifier: "toMainPage", sender: self)
             }
         }
         

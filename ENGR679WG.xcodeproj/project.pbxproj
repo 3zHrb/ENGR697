@@ -13,9 +13,11 @@
 		0414190C216828CC0018746A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0414190B216828CC0018746A /* Assets.xcassets */; };
 		0414190F216828CC0018746A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0414190D216828CC0018746A /* LaunchScreen.storyboard */; };
 		043B1F55216DB7C7009D59B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 043B1F54216DB7C7009D59B2 /* GoogleService-Info.plist */; };
+		0456F93321A54F2F00D68E6B /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0456F93221A54F2F00D68E6B /* MainPageViewController.swift */; };
 		04580A712171B250004A5A0E /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04580A702171B250004A5A0E /* SignIn.swift */; };
 		04580A732171B286004A5A0E /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04580A722171B286004A5A0E /* SignUp.swift */; };
-		04580A752171B2B2004A5A0E /* Calender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04580A742171B2B2004A5A0E /* Calender.swift */; };
+		04F4140121A3FD700084F04D /* BLEsettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4140021A3FD700084F04D /* BLEsettings.swift */; };
+		04F4140321A42BA50084F04D /* CellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4140221A42BA50084F04D /* CellTableViewCell.swift */; };
 		59267FF79FBA0F31B673DCC5 /* Pods_ENGR679WG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A33F3E56D3B8682A0C55096 /* Pods_ENGR679WG.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,9 +30,11 @@
 		0414190E216828CC0018746A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04141910216828CC0018746A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043B1F54216DB7C7009D59B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0456F93221A54F2F00D68E6B /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		04580A702171B250004A5A0E /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		04580A722171B286004A5A0E /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
-		04580A742171B2B2004A5A0E /* Calender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calender.swift; sourceTree = "<group>"; };
+		04F4140021A3FD700084F04D /* BLEsettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEsettings.swift; sourceTree = "<group>"; };
+		04F4140221A42BA50084F04D /* CellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewCell.swift; sourceTree = "<group>"; };
 		4A33F3E56D3B8682A0C55096 /* Pods_ENGR679WG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ENGR679WG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0556097252D83B45439355 /* Pods-ENGR679WG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ENGR679WG.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ENGR679WG/Pods-ENGR679WG.debug.xcconfig"; sourceTree = "<group>"; };
 		F6D6B3C7F8183F3D13F5CD93 /* Pods-ENGR679WG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ENGR679WG.release.xcconfig"; path = "Pods/Target Support Files/Pods-ENGR679WG/Pods-ENGR679WG.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,8 +75,10 @@
 			isa = PBXGroup;
 			children = (
 				04141904216828C90018746A /* AppDelegate.swift */,
+				0456F93221A54F2F00D68E6B /* MainPageViewController.swift */,
 				04141906216828C90018746A /* ViewController.swift */,
-				04580A742171B2B2004A5A0E /* Calender.swift */,
+				04F4140221A42BA50084F04D /* CellTableViewCell.swift */,
+				04F4140021A3FD700084F04D /* BLEsettings.swift */,
 				04580A722171B286004A5A0E /* SignUp.swift */,
 				04580A702171B250004A5A0E /* SignIn.swift */,
 				0414190B216828CC0018746A /* Assets.xcassets */,
@@ -227,10 +233,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				04141907216828C90018746A /* ViewController.swift in Sources */,
+				0456F93321A54F2F00D68E6B /* MainPageViewController.swift in Sources */,
 				04580A732171B286004A5A0E /* SignUp.swift in Sources */,
+				04F4140121A3FD700084F04D /* BLEsettings.swift in Sources */,
+				04F4140321A42BA50084F04D /* CellTableViewCell.swift in Sources */,
 				04580A712171B250004A5A0E /* SignIn.swift in Sources */,
 				04141905216828C90018746A /* AppDelegate.swift in Sources */,
-				04580A752171B2B2004A5A0E /* Calender.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

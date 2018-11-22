@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         if Auth.auth().currentUser != nil {
-            performSegue(withIdentifier: "toCalender", sender: self)
+            performSegue(withIdentifier: "toMainPage0", sender: self)
             
             
         }

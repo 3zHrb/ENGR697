@@ -37,12 +37,14 @@ class SignIn: UIViewController {
             
             if error != nil {
                 print(error!)
+                SVProgressHUD.dismiss()
+                
             } else {
                 print("Log in successful!")
                 
                 SVProgressHUD.dismiss()
                 
-                self.performSegue(withIdentifier: "toCalender", sender: self)
+                self.performSegue(withIdentifier: "toMainPage2", sender: self)
                 
             }
             
