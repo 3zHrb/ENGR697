@@ -12,9 +12,10 @@ import SVProgressHUD
 
 class SignIn: UIViewController {
 
-    @IBOutlet var emailTextField: UITextField!// is set to be strong !!
-    @IBOutlet var passwordTextField: UITextField! // is set to be strong !!
+   
+    @IBOutlet weak var emailTextField: UITextField!
     
+    @IBOutlet weak var passwordTextField: UITextField!
     
     
     override func viewDidLoad() {
@@ -38,6 +39,16 @@ class SignIn: UIViewController {
             if error != nil {
                 print(error!)
                 SVProgressHUD.dismiss()
+                
+                let alertVC = UIAlertController(title: "Error", message: "Check your Email/Password", preferredStyle: .alert)
+                
+                let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (UIAlertAction) in
+                    alertVC.dismiss(animated: true, completion: nil)
+                })
+                alertVC.addAction(okAction)
+                
+                self.present(alertVC, animated: true, completion: nil)
+                
                 
             } else {
                 print("Log in successful!")

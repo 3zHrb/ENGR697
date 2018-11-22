@@ -12,8 +12,12 @@ import SVProgressHUD
 
 class SignUp: UIViewController {
 
-    @IBOutlet var emailTextField: UITextField!//strong
-    @IBOutlet var passwordTextField: UITextField!//strong
+   
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,6 +39,16 @@ class SignUp: UIViewController {
             
             if error != nil {
                 print(error!)
+                SVProgressHUD.dismiss()
+                
+               let alertVC = UIAlertController(title: "Error", message: "The Email you entered already exist", preferredStyle: .alert)
+                
+                let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (UIAlertAction) in
+                    alertVC.dismiss(animated: true, completion: nil)
+                })
+                alertVC.addAction(okAction)
+                self.present(alertVC, animated: true, completion: nil)
+                
             } else {
                 print("Registration Successful!")
                 

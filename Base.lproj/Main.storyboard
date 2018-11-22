@@ -177,8 +177,8 @@
                         <viewLayoutGuide key="safeArea" id="G4e-Pd-IHt"/>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="tdc-ad-pWG" id="Knv-yq-Zfy"/>
-                        <outlet property="passwordTextField" destination="7Em-T8-hVZ" id="1bC-H2-ShV"/>
+                        <outlet property="emailTextField" destination="tdc-ad-pWG" id="HI1-iQ-MP3"/>
+                        <outlet property="passwordTextField" destination="7Em-T8-hVZ" id="02s-Qf-kca"/>
                         <segue destination="rCv-z2-oJ8" kind="show" identifier="toMainPage2" id="4nL-VM-Do6"/>
                     </connections>
                 </viewController>
@@ -309,8 +309,8 @@
                         <viewLayoutGuide key="safeArea" id="8lz-Qs-tH2"/>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="RqB-gS-h3T" id="mGF-hf-hFf"/>
-                        <outlet property="passwordTextField" destination="pcJ-qq-fiH" id="1xW-EL-5lp"/>
+                        <outlet property="emailTextField" destination="RqB-gS-h3T" id="rME-JD-36t"/>
+                        <outlet property="passwordTextField" destination="pcJ-qq-fiH" id="jS2-X5-CR3"/>
                         <segue destination="rCv-z2-oJ8" kind="show" identifier="toMainPage" id="a6S-9O-9Hq"/>
                     </connections>
                 </viewController>
@@ -338,6 +338,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LdL-DX-Z0j"/>
+        <segue reference="4nL-VM-Do6"/>
     </inferredMetricsTieBreakers>
 </document>
