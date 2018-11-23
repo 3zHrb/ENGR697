@@ -210,6 +210,19 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2nF-6M-3Ym">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <navigationBar key="tableFooterView" contentMode="scaleToFill" id="FrS-PH-eGQ">
+                                    <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <items>
+                                        <navigationItem title="Refresh" id="xcJ-KF-IAj">
+                                            <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="P4f-K6-CdP">
+                                                <connections>
+                                                    <action selector="refreshButton:" destination="Ljg-Ce-Ti7" id="9Ev-Mf-3UM"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </navigationItem>
+                                    </items>
+                                </navigationBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TheCell0" id="eS6-Ni-sEV" customClass="CellTableViewCell" customModule="ENGR679WG" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>

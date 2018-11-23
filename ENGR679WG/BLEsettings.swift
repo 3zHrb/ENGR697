@@ -17,7 +17,7 @@ class BLEsettings: UIViewController, UITableViewDelegate, UITableViewDataSource,
 
     
 
-    var CBManager : CBCentralManager!
+    var CBManager : CBCentralManager?
     var names:[String] = []
     
     @IBOutlet weak var UITableView0: UITableView!
@@ -44,7 +44,7 @@ class BLEsettings: UIViewController, UITableViewDelegate, UITableViewDataSource,
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let CellVar = tableView.dequeueReusableCell(withIdentifier: "TheCell0", for: indexPath) as? CellTableViewCell{
-            
+            // Array(Set(names))
             CellVar.bluetoothName.text = names[indexPath.row]
             
             return CellVar
@@ -59,7 +59,8 @@ class BLEsettings: UIViewController, UITableViewDelegate, UITableViewDataSource,
         
         if central.state == .poweredOn {
             
-            central.scanForPeripherals(withServices: nil, options: nil)
+            central.scanForPeripherals(withServices: [CBUUID.init(string: "DFB0")], options: nil)
+            
             
         }else{
             
@@ -74,29 +75,40 @@ class BLEsettings: UIViewController, UITableViewDelegate, UITableViewDataSource,
             present(alertVC, animated: true, completion: nil)
             
         }
+        //central.stopScan()
         
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         
-        
+        print("*********************")
         if let namePer = peripheral.name {
         print("periphiral name: ", namePer)
             
        names.append(namePer)
+           
              UITableView0.reloadData()
-            central.stopScan()
+            //central.stopScan()
         }
         print("advertisement Data: ", advertisementData)
         print("RSSI", RSSI)
         print("UUID", peripheral.identifier.uuidString)
-        
+        print("*********************")
     
        
         
     }
     
    
+    
+    @IBAction func refreshButton(_ sender: Any) {
+        
+        names = []
+       
+        CBManager?.scanForPeripherals(withServices: [CBUUID.init(string: "DFB0")], options: nil)
+        //CBManager?.stopScan()
+        UITableView0.reloadData()
+    }
     
     /*
     // MARK: - Navigation
