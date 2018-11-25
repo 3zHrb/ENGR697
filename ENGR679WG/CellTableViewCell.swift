@@ -10,6 +10,7 @@ import UIKit
 
 class CellTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var uuidLable: UILabel!
     @IBOutlet weak var bluetoothName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -8,8 +8,22 @@
 
 import UIKit
 import Firebase
+import CoreBluetooth
 
-class MainPageViewController: UIViewController {
+class MainPageViewController: UIViewController{ //, CBCentralManagerDelegate, CBPeripheralDelegate{
+    
+    /*var manager:CBCentralManager? = nil
+    var mainPeripheral:CBPeripheral? = nil
+    var mainCharacteristic:CBCharacteristic? = nil
+    
+    let BLEService = "DFB0"
+    let BLECharacteristic = "DFB1"
+    
+    
+    func centralManagerDidUpdateState(_ central: CBCentralManager) {
+        <#code#>
+    }*/
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

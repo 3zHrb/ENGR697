@@ -19,6 +19,10 @@ class BLEsettings: UIViewController, UITableViewDelegate, UITableViewDataSource,
 
     var CBManager : CBCentralManager?
     var names:[String] = []
+    var BLEDevices: [CBPeripheral] = []
+    var myPeripheral : CBPeripheral?
+    
+    var uuid: Any?
     
     @IBOutlet weak var UITableView0: UITableView!
     override func viewDidLoad() {
@@ -35,7 +39,11 @@ class BLEsettings: UIViewController, UITableViewDelegate, UITableViewDataSource,
         // Do any additional setup after loading the view.
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        
+        CBManager?.scanForPeripherals(withServices: [CBUUID.init(string: "DFB0")], options: nil)
+        
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return names.count
@@ -45,12 +53,41 @@ class BLEsettings: UIViewController, UITableViewDelegate, UITableViewDataSource,
         
         if let CellVar = tableView.dequeueReusableCell(withIdentifier: "TheCell0", for: indexPath) as? CellTableViewCell{
             // Array(Set(names))
-            CellVar.bluetoothName.text = names[indexPath.row]
+            myPeripheral = BLEDevices[indexPath.row]
+            CellVar.bluetoothName.text = myPeripheral?.name
+            
+            //Cellvar.uuidLable.texy =
             
             return CellVar
         }
         
         return CellTableViewCell()
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let choosen = BLEDevices[indexPath.row]
+        CBManager?.connect(choosen, options: nil)
+    }
+    
+    
+    func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+        
+        
+        let alertVC = UIAlertController(title: "Connected!", message: "The device you selected is now connected", preferredStyle: .alert)
+        
+        let alertAc = UIAlertAction(title: "ok", style: .default) { (UIAlertAction) in
+            
+            if let navController = self.navigationController {
+                navController.popViewController(animated: true)
+            }
+            
+        }
+        
+        alertVC.addAction(alertAc)
+        
+        present(alertVC, animated: true, completion: nil)
+        
         
     }
     
@@ -75,11 +112,14 @@ class BLEsettings: UIViewController, UITableViewDelegate, UITableViewDataSource,
             present(alertVC, animated: true, completion: nil)
             
         }
-        //central.stopScan()
+       
         
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+        
+        myPeripheral = peripheral
+        BLEDevices.append(peripheral)
         
         print("*********************")
         if let namePer = peripheral.name {
@@ -90,7 +130,9 @@ class BLEsettings: UIViewController, UITableViewDelegate, UITableViewDataSource,
              UITableView0.reloadData()
             //central.stopScan()
         }
-        print("advertisement Data: ", advertisementData)
+       // print("advertisement Data: ", //advertisementData["kCBAdvDataServiceUUIDs"])
+       //uuid = advertisementData["kCBAdvDataServiceUUIDs"]
+        
         print("RSSI", RSSI)
         print("UUID", peripheral.identifier.uuidString)
         print("*********************")
@@ -109,6 +151,20 @@ class BLEsettings: UIViewController, UITableViewDelegate, UITableViewDataSource,
         //CBManager?.stopScan()
         UITableView0.reloadData()
     }
+    
+    
+   /* func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+        let alertVC = UIAlertController(title: "Connected", message: "The Device is now connected! ", preferredStyle: .alert)
+        
+        let theAction = UIAlertAction(title: nil, style: .default) { (UIAlertAction) in
+            alertVC.dismiss(animated: true, completion: nil)
+            
+        }
+        alertVC.addAction(theAction)
+        
+        present(alertVC, animated: true, completion: nil)
+        
+    }*/
     
     /*
     // MARK: - Navigation
