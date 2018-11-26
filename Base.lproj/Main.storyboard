@@ -90,7 +90,7 @@
                                     <navigationItem title="Title" id="nCF-RQ-Eyy">
                                         <barButtonItem key="leftBarButtonItem" title="BLE Setting" id="2eW-S6-nMe">
                                             <connections>
-                                                <segue destination="Ljg-Ce-Ti7" kind="show" id="UPH-RI-1Kd"/>
+                                                <action selector="BLESetting:" destination="rCv-z2-oJ8" id="TlE-s3-9FI"/>
                                             </connections>
                                         </barButtonItem>
                                         <rightBarButtonItems>
@@ -104,6 +104,13 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0S-Fn-bei">
+                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -113,6 +120,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WyW-4d-6rx"/>
                     </view>
+                    <connections>
+                        <outlet property="recievedMessageText" destination="o0S-Fn-bei" id="V0L-bf-79D"/>
+                        <segue destination="Ljg-Ce-Ti7" kind="show" identifier="scan-segue" id="Nu2-5u-06a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ueJ-9a-trB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -214,7 +225,12 @@
                                     <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <items>
-                                        <navigationItem title="Refresh" id="xcJ-KF-IAj">
+                                        <navigationItem id="xcJ-KF-IAj">
+                                            <barButtonItem key="leftBarButtonItem" title="Disconnect" id="Ce2-wR-Afd">
+                                                <connections>
+                                                    <action selector="disconnectButton:" destination="Ljg-Ce-Ti7" id="War-fe-m0B"/>
+                                                </connections>
+                                            </barButtonItem>
                                             <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="P4f-K6-CdP">
                                                 <connections>
                                                     <action selector="refreshButton:" destination="Ljg-Ce-Ti7" id="9Ev-Mf-3UM"/>
@@ -266,6 +282,7 @@
                     </view>
                     <connections>
                         <outlet property="UITableView0" destination="2nF-6M-3Ym" id="mEW-04-AEM"/>
+                        <outlet property="disconnectButton" destination="Ce2-wR-Afd" id="DCx-o6-3X5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbi-Fq-8wi" userLabel="First Responder" sceneMemberID="firstResponder"/>
